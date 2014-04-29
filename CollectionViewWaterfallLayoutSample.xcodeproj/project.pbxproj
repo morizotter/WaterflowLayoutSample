@@ -21,6 +21,10 @@
 		FF8DA70D190F739D00E4E209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8DA6EF190F739D00E4E209 /* UIKit.framework */; };
 		FF8DA715190F739D00E4E209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF8DA713190F739D00E4E209 /* InfoPlist.strings */; };
 		FF8DA717190F739D00E4E209 /* CollectionViewWaterfallLayoutSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8DA716190F739D00E4E209 /* CollectionViewWaterfallLayoutSampleTests.m */; };
+		FF8DA722190F73C200E4E209 /* WaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8DA721190F73C200E4E209 /* WaterfallCell.m */; };
+		FF8DA725190F73E900E4E209 /* WaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8DA724190F73E900E4E209 /* WaterfallHeader.m */; };
+		FF8DA728190F740600E4E209 /* WaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8DA727190F740600E4E209 /* WaterfallFooter.m */; };
+		FF8DA72B190F742500E4E209 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8DA72A190F742500E4E209 /* WaterfallLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		FF8DA712190F739D00E4E209 /* CollectionViewWaterfallLayoutSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewWaterfallLayoutSampleTests-Info.plist"; sourceTree = "<group>"; };
 		FF8DA714190F739D00E4E209 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF8DA716190F739D00E4E209 /* CollectionViewWaterfallLayoutSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewWaterfallLayoutSampleTests.m; sourceTree = "<group>"; };
+		FF8DA720190F73C200E4E209 /* WaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCell.h; sourceTree = "<group>"; };
+		FF8DA721190F73C200E4E209 /* WaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCell.m; sourceTree = "<group>"; };
+		FF8DA723190F73E900E4E209 /* WaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallHeader.h; sourceTree = "<group>"; };
+		FF8DA724190F73E900E4E209 /* WaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallHeader.m; sourceTree = "<group>"; };
+		FF8DA726190F740600E4E209 /* WaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallFooter.h; sourceTree = "<group>"; };
+		FF8DA727190F740600E4E209 /* WaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallFooter.m; sourceTree = "<group>"; };
+		FF8DA729190F742500E4E209 /* WaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallLayout.h; sourceTree = "<group>"; };
+		FF8DA72A190F742500E4E209 /* WaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,14 @@
 				FF8DA6FD190F739D00E4E209 /* Main.storyboard */,
 				FF8DA700190F739D00E4E209 /* ViewController.h */,
 				FF8DA701190F739D00E4E209 /* ViewController.m */,
+				FF8DA720190F73C200E4E209 /* WaterfallCell.h */,
+				FF8DA721190F73C200E4E209 /* WaterfallCell.m */,
+				FF8DA723190F73E900E4E209 /* WaterfallHeader.h */,
+				FF8DA724190F73E900E4E209 /* WaterfallHeader.m */,
+				FF8DA726190F740600E4E209 /* WaterfallFooter.h */,
+				FF8DA727190F740600E4E209 /* WaterfallFooter.m */,
+				FF8DA729190F742500E4E209 /* WaterfallLayout.h */,
+				FF8DA72A190F742500E4E209 /* WaterfallLayout.m */,
 				FF8DA703190F739D00E4E209 /* Images.xcassets */,
 				FF8DA6F2190F739D00E4E209 /* Supporting Files */,
 			);
@@ -249,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8DA725190F73E900E4E209 /* WaterfallHeader.m in Sources */,
+				FF8DA728190F740600E4E209 /* WaterfallFooter.m in Sources */,
+				FF8DA722190F73C200E4E209 /* WaterfallCell.m in Sources */,
 				FF8DA702190F739D00E4E209 /* ViewController.m in Sources */,
+				FF8DA72B190F742500E4E209 /* WaterfallLayout.m in Sources */,
 				FF8DA6FC190F739D00E4E209 /* AppDelegate.m in Sources */,
 				FF8DA6F8190F739D00E4E209 /* main.m in Sources */,
 			);
