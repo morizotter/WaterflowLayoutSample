@@ -123,9 +123,7 @@ const NSInteger unionSize = 20;
     UIEdgeInsets sectionInset;
     if ([_delegate
          respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
-        sectionInset = [_delegate collectionView:self.collectionView
-                                          layout:self
-                          insetForSectionAtIndex:section];
+        sectionInset = [_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
     } else {
         sectionInset = self.sectionInset;
     }
@@ -167,8 +165,8 @@ const NSInteger unionSize = 20;
     }
     
     self.delegate = (id <WaterfallLayoutDelegate> )self.collectionView.delegate;
-    NSAssert([self.delegate conformsToProtocol:@protocol(WaterfallLayoutDelegate)], @"UICollectionView's delegate should conform to CHTCollectionViewDelegateWaterfallLayout protocol");
-    NSAssert(self.columnCount > 0, @"UICollectionViewWaterfallLayout's columnCount should be greater than 0");
+    NSAssert([self.delegate conformsToProtocol:@protocol(WaterfallLayoutDelegate)], @"UICollectionView's delegate should conform to WaterfallLayoutDelegate protocol");
+    NSAssert(self.columnCount > 0, @"WaterfallLayoutDelegate's columnCount should be greater than 0");
     
     // Initialize variables
     NSInteger idx = 0;
@@ -211,8 +209,7 @@ const NSInteger unionSize = 20;
             sectionInset = self.sectionInset;
         }
         
-        CGFloat width = self.collectionView.frame.size.width
-        - sectionInset.left - sectionInset.right;
+        CGFloat width = self.collectionView.frame.size.width - sectionInset.left - sectionInset.right;
         
         CGFloat itemWidth = floorf((width - (self.columnCount - 1)
                                     * self.minimumColumnSpacing) / self.columnCount);
@@ -275,8 +272,7 @@ const NSInteger unionSize = 20;
          */
         CGFloat footerHeight;
         NSUInteger columnIndex = [self longestColumnIndex];
-        top = [self.columnHeights[columnIndex] floatValue]
-        - minimumInteritemSpacing + sectionInset.bottom;
+        top = [self.columnHeights[columnIndex] floatValue] - minimumInteritemSpacing + sectionInset.bottom;
         
         if ([self.delegate respondsToSelector:@selector(collectionView:layout:heightForFooterInSection:)]) {
             footerHeight = [self.delegate collectionView:self.collectionView layout:self heightForFooterInSection:section];

@@ -55,19 +55,6 @@
     return _collectionView;
 }
 
-- (NSMutableArray *)cellSizes {
-    if (!_cellSizes) {
-        _cellSizes = [NSMutableArray array];
-        for (NSInteger i = 0; i < CELL_COUNT; i++) {
-            CGSize size = CGSizeMake(arc4random() % 50 + 50, arc4random() % 50 + 50);
-            _cellSizes[i] = [NSValue valueWithCGSize:size];
-        }
-    }
-    return _cellSizes;
-}
-
-#pragma mark - Life Cycle
-
 - (void)dealloc {
     _collectionView.delegate = nil;
     _collectionView.dataSource = nil;
@@ -94,6 +81,17 @@
     layout.columnCount = UIInterfaceOrientationIsPortrait(orientation) ? 2 : 3;
 }
 
+- (NSMutableArray *)cellSizes {
+    if (!_cellSizes) {
+        _cellSizes = [NSMutableArray array];
+        for (NSInteger i = 0; i < CELL_COUNT; i++) {
+            CGSize size = CGSizeMake(arc4random() % 100 + 50, arc4random() % 100 + 50);
+            _cellSizes[i] = [NSValue valueWithCGSize:size];
+        }
+    }
+    return _cellSizes;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -116,13 +114,9 @@
     UICollectionReusableView *reusableView = nil;
     
     if ([kind isEqualToString:CollectionElementKindSectionHeader]) {
-        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                          withReuseIdentifier:HEADER_IDENTIFIER
-                                                                 forIndexPath:indexPath];
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HEADER_IDENTIFIER forIndexPath:indexPath];
     } else if ([kind isEqualToString:CollectionElementKindSectionFooter]) {
-        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                          withReuseIdentifier:FOOTER_IDENTIFIER
-                                                                 forIndexPath:indexPath];
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:FOOTER_IDENTIFIER forIndexPath:indexPath];
     }
     
     return reusableView;

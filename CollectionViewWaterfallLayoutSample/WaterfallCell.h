@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WaterfallCell : UICollectionViewCell
-@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
 @end
