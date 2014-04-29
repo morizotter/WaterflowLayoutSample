@@ -12,7 +12,7 @@ I would like to make Pinterest like View with UICollection View.
 Blog
 -----
 
-The code-reading process is blogged in [MorizotterBlog](http://blog.morizotter.com).
+The code-reading process is blogged in [UICollectionViewでWaterfallを実現してみた - Morizotter Blog](http://blog.morizotter.com/2014/04/29/uicollectionview-waterfall-code-reading/) - Written only in Japanese.
 
 Me
 ---
